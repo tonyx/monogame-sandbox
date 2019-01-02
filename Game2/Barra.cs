@@ -19,8 +19,8 @@ namespace Game2
         int yWindowMargin;
         int xWindowMargin;
 
-        public static int XSpriteRatio = 5;
-        public static int YSpriteRatio = 5;
+        public static int XSpriteRatio = 1;
+        public static int YSpriteRatio = 1;
 
         public int XSpeed
         {
@@ -34,19 +34,6 @@ namespace Game2
             set { ySpeed = value;}
         }
 
-
-        //public Barra(Texture2D omino, Rectangle drawRectangle, int xSpeed, int ySpeed)
-        //{
-        //    this.barra = omino;
-        //    this.drawRectangle = drawRectangle;
-        //    this.drawRectangle.Width = omino.Width / XSpriteRatio;
-        //    this.drawRectangle.Height = omino.Height / YSpriteRatio;
-        //    this.drawRectangle.X = xSpeed;
-        //    this.drawRectangle.Y = ySpeed;
-
-        //    this.XSpeed = xSpeed;
-        //    this.YSpeed = ySpeed;
-        //}
 
         public Barra(Texture2D barraSprite, int initXPosition, int initYPosition, int xBoundary, int yBoundary, int initXSpeed, int initYSpeed)
         {
@@ -100,9 +87,7 @@ namespace Game2
                 ySpeed = ySpeed * (-1);
             }
 
-
         }
     }
-
 
 }

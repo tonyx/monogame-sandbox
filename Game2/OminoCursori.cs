@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Game2
 {
-    public class OminoCursori
+    public class OminoCursori : Observer
     {
 
         Texture2D omino;
@@ -17,6 +17,11 @@ namespace Game2
         Direction currentDirection = Direction.None;
         int xSpeed;
         int ySpeed;
+
+        public void ObserverUpdate(int yPosition)
+        {
+            this.YPosition = yPosition-this.drawRectangle.Height;
+        } 
 
         public int XPosition 
         {
@@ -29,7 +34,6 @@ namespace Game2
             get { return DrawRectangle.Y;}
             set { drawRectangle.Y = value; }
         }
-
 
 
         public int XSpeed
@@ -126,5 +130,6 @@ namespace Game2
             drawRectangle.Y += YSpeed;
         }
     }
-
 }
+
+
